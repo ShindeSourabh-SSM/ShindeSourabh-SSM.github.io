@@ -52,7 +52,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
  /* Certificate Section CSS */
 .certificate-section {
   padding: 50px 0;
-  background-color: #f9f9f9;
+  /*background-color: #f9f9f9;*/
 }
 
 .certificate-slider {
