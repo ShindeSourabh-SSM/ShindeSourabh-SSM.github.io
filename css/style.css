@@ -49,26 +49,34 @@ html {
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block; }
 
-/* Certificate Section CSS */
+/* styles.css */
+
+/* Compact Certificate Section CSS */
 .certificate-section {
-  padding: 50px 0;
+  padding: 30px 0; /* Reduced padding */
+}
+
+.certificate-slider-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
 .certificate-slider {
   display: flex;
-  overflow: hidden;
-  animation: slide 30s linear infinite;
+  transition: transform 0.5s ease;
+  width: 100%;
 }
 
 .certificate-slide {
-  min-width: 33.33%; /* Display three certificates per row */
-  max-width: 33.33%;
-  margin: 10px;
+  min-width: 30%;
+  margin: 0 10px; /* Add spacing between certificates */
 }
 
 .certificate-slide .block-20 {
   width: 100%;
-  height: 200px;
+  height: 150px; /* Reduced height for compact display */
   border-radius: 10px;
   background-size: cover;
   background-position: center;
@@ -80,11 +88,29 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   transform: scale(1.05);
 }
 
-/* Smooth infinite sliding animation */
-@keyframes slide {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
+/* Navigation Buttons */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
 }
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
