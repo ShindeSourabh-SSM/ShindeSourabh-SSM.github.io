@@ -51,67 +51,42 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 /* styles.css */
 
-/* General certificate section styling */
+/* Compact Certificate Section CSS */
 .certificate-section {
-  padding: 50px 0;
-  background-color: #f9f9f9;
+  padding: 30px 0;
+  overflow: hidden;
 }
 
-/* Container for certificate slider */
 .certificate-slider-container {
   overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  position: relative;
 }
 
 .certificate-slider {
   display: flex;
-  flex-wrap: wrap; /* Allow the items to wrap */
-  justify-content: space-between; /* Space between items */
-  gap: 15px; /* Space between the slides */
-  margin-top: 30px;
+  transition: transform 0.3s ease;
 }
 
 .certificate-slide {
-  flex: 1 1 30%; /* Allow each slide to take up 30% of the width, adjust for smaller screens */
-  min-width: 250px; /* Ensure there's a minimum width for mobile screens */
-  max-width: 30%; /* Max width ensures there is a limit */
-  height: 200px;
+  min-width: 200px; /* Adjust width as needed */
+  margin-right: 10px;
+}
+
+.certificate-slide .block-20 {
+  width: 100%;
+  height: 150px;
   border-radius: 10px;
   background-size: cover;
   background-position: center;
-  position: relative;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease;
 }
 
-.certificate-slide a {
-  display: block;
-  height: 100%;
-  width: 100%;
-  text-decoration: none;
-  border-radius: 10px;
+/* Zoom Effect */
+.zoom-effect:hover {
+  transform: scale(1.05);
 }
-
-.certificate-slide:hover {
-  transform: scale(1.05); /* Zoom effect on hover */
-}
-
-/* Responsive Styles */
-@media (max-width: 767px) {
-  .certificate-slide {
-      flex: 1 1 45%; /* For mobile devices, make it 45% width */
-      min-width: 200px;
-      height: 150px; /* Adjust the height for better mobile display */
-  }
-}
-
-@media (max-width: 480px) {
-  .certificate-slide {
-      flex: 1 1 100%; /* For very small screens, make it 100% width */
-      min-width: 100%;
-      height: 180px; /* Adjust the height for better display on small screens */
-  }
-}
-
-
 
 
 body {
