@@ -49,21 +49,19 @@ html {
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block; }
 
- /* Certificate Section CSS */
+/* Certificate Section CSS */
 .certificate-section {
   padding: 50px 0;
-  /*background-color: #f9f9f9;*/
 }
 
 .certificate-slider {
   display: flex;
-  flex-wrap: nowrap;
   overflow: hidden;
-  animation: slide 20s infinite linear;
+  animation: slide 30s linear infinite;
 }
 
 .certificate-slide {
-  min-width: 33.33%; /* Ensures three certificates per row */
+  min-width: 33.33%; /* Display three certificates per row */
   max-width: 33.33%;
   margin: 10px;
 }
@@ -82,14 +80,10 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   transform: scale(1.05);
 }
 
-/* Animation for sliding */
+/* Smooth infinite sliding animation */
 @keyframes slide {
   0% { transform: translateX(0); }
-  20% { transform: translateX(-100%); }
-  40% { transform: translateX(-200%); }
-  60% { transform: translateX(-300%); }
-  80% { transform: translateX(-400%); }
-  100% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
 }
 body {
   margin: 0;
