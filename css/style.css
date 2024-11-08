@@ -70,14 +70,14 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 }
 
 .certificate-slide {
-  min-width: 200px; /* Adjust width as needed */
+  min-width: 200px; /* Adjust width for larger screens */
   margin-right: 10px;
+  flex-shrink: 0; /* Prevent shrinking of slides */
 }
 
-/* Make the certificate images more responsive on mobile */
 .certificate-slide .block-20 {
   width: 100%;
-  height: 150px;
+  height: 150px; /* Adjust height for better display */
   border-radius: 10px;
   background-size: cover;
   background-position: center;
@@ -89,17 +89,50 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   transform: scale(1.05);
 }
 
-/* Media query for small screens */
+/* Responsive adjustments for mobile screens */
 @media (max-width: 768px) {
   .certificate-slide {
-    min-width: 100%; /* Make the slides take full width on mobile */
-    margin-right: 0; /* Remove right margin to avoid spacing issues */
+    min-width: 90%;  /* Adjust width to 90% of the screen on mobile */
+    margin-right: 5%; /* Small margin for spacing */
   }
-  
+
   .certificate-slide .block-20 {
-    height: 250px; /* Adjust height for better mobile visibility */
+    height: 250px;  /* Adjust height for better visibility on mobile */
   }
 }
+/* Style for the Prev and Next buttons */
+.prev-btn, .next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: green; /* Green color */
+  color: white;  /* White text color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50%; /* Round shape */
+  cursor: pointer;
+  z-index: 10;  /* Make sure the buttons are on top of the slider */
+  font-size: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Positioning the Prev button on the left */
+.prev-btn {
+  left: 10px;
+}
+
+/* Positioning the Next button on the right */
+.next-btn {
+  right: 10px;
+}
+
+/* Hover effect for the buttons */
+.prev-btn:hover, .next-btn:hover {
+  background-color: darkgreen; /* Dark green on hover */
+  transform: translateY(-50%) scale(1.1); /* Slight scaling on hover */
+}
+
+
 
 
 
